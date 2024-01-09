@@ -29,6 +29,10 @@ dd {
   margin: 0;
 }
 
+p {
+  font-family: 'Inter', sans-serif !important;
+}
+
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
