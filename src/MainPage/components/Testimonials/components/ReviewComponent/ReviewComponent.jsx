@@ -11,7 +11,7 @@ const ReviewComponent = ({ img, text, name, post }) => (
   </Container>
 );
 const Container = styled.div`
-  width: 360px;
+  width: 360px; 
   height: 289px;
   border-radius: 8px;
   background: #fbfbfb;
@@ -22,6 +22,15 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   justify-content: flex-end;
+  transition: 0.34s;
+  &:hover {
+    transform: scale(1.06);
+    background: #F4F2FE;
+    @media (max-width: 1100px) {
+      transform: none;
+      background: #fbfbfb;
+    }
+  }
 `;
 const Avatar = styled.div`
   width: 96px;
@@ -55,5 +64,8 @@ const Post = styled.p`
   font-size: 12px;
   font-weight: 500;
   padding: 4px 8px;
+  width: fit-content;
+  background: #fbfbfb;
+  border-radius: 4px;
 `;
 export default ReviewComponent;
