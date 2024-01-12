@@ -1,47 +1,54 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReviewComponent from './components/ReviewComponent/ReviewComponent';
-import diana from '../imgs/Diana.jpg';
-import kostya from '../imgs/Kostya.jpg';
-import anton from '../imgs/Anton.jpg';
 import styled from 'styled-components';
-const reviews = [
-  {
-    img: diana,
-    text: 'Ilya is an incredible learner! He advances to the middle, solves difficult problems, and asks the right questions',
-    name: 'Diana',
-    post: 'Front-end developer',
-  },
-  {
-    img: kostya,
-    text: 'Not afraid of new things and taking responsibility for his decisions, actively pumping self-propulsion',
-    name: 'Kostya',
-    post: 'Product manager',
-  },
-  {
-    img: anton,
-    text: 'Caring colleague, developer, willing to support the team, share knowledge and solve challenges together',
-    name: 'Anton',
-    post: 'Front-end developer',
-  },
-];
-const Testimonials = () => (
-  <Container>
-    <SubTitle>Reviews</SubTitle>
-    <Title>Testimonials</Title>
-    <ReviewList>
-      {reviews.map((item, index) => (
-        <ReviewComponent key={index} {...item} />
-      ))}
-    </ReviewList>
-  </Container>
-);
+
+function Testimonials() {
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/reviews")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setItems(result);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      );
+  }, []);
+
+  if (error) {
+    return <div>Возникла ошибка: {error.message}</div>;
+  } else if (!isLoaded) {
+    return <div>Загрузка...</div>;
+  } else {
+    return (
+      <Container>
+        <SubTitle>Reviews</SubTitle>
+        <Title>Testimonials</Title>
+        <ReviewList>
+          {items.map((item, index) => (
+            <ReviewComponent key={index} {...item} />
+          ))}
+        </ReviewList>
+      </Container>
+    );
+  }
+}
+
 const Container = styled.div`
   width: 100%;
   max-width: 1200px;
   @media (max-width: 1100px) {
-    padding: 600px 0px 80px 0px;
+    padding: 600px 0 80px 0;
   }
 `;
+
 const SubTitle = styled.p`
   color: #656d72;
   font-size: 12px;
@@ -62,6 +69,7 @@ const SubTitle = styled.p`
     justify-content: center;
   }
 `;
+
 const Title = styled.p`
   color: #232e35;
   font-size: 36px;
@@ -73,6 +81,7 @@ const Title = styled.p`
     text-align: center;
   }
 `;
+
 const ReviewList = styled.div`
   display: flex;
   width: 100%;
@@ -84,4 +93,5 @@ const ReviewList = styled.div`
     padding-top: 80px;
   }
 `;
+
 export default Testimonials;

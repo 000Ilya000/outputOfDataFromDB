@@ -1,0 +1,25 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "img": "https://s3-alpha-sig.figma.com/img/8740/14cb/a638573556c26cbd6b559e4b249eaf22?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Xwd4bIdIlYYlOzUqJz49wCkAi2FOppDv0F~BRltjEzCNhOvx3RNSy~awBogqpq9R6FJT1llOpuxbRJJib5J0P60EqsVyjg0jS-Yqm0ckx0LjeNukWVja9xnVMQBkJraSDj9DMfcEAcZKkjpaHD~GbmKYSR2js9Qea5ureWFjWI0zMADVpUeGSFjcGODkMSaZ~sEbLihyvR7qNA5FMO8Li6WmDk4roK-NzPVmLLumJhhlOa3AEpWXAmPYZThww7QNY4L7~MDSnmU-UBmj0aLRSzfGAnk4StLSPWgiIt6x8M1UftpM3ZpzPznQSxJt3rTvszK8W1B1PmzzzsH7pPEp7A__",
+      "text": "Ilya is an incredible learner! He advances to the middle, solves difficult problems, and asks the right questions",
+      "name": "Diana",
+      "post": "Front-end developer"
+    },
+    {
+      "id": 2,
+      "img": "https://s3-alpha-sig.figma.com/img/aec4/1c73/14789e1fa4d86a9966359d23e1a19778?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jgEurHIHPWIIAp0E1uqHn~xRYRrhxJwyAnTbNvhLwgJVzehfc9MGfFWcix5f0rXohjYEeZQMHEqQhipsCGGZOMTWcMGtQB3Qv28A~EX~jU2vweJ0SYVLfLii2Y6TFcwLiJXfsebjoeuMnDKao6zN2l-rZYm0AM0-tT-eQays3C0VUjko9MW~JidHPRwr-VHtVY-tX67PjFuqVte~gl~-~ySp7XpQzbvwzXzXXmdgEQIqNO4ASk9CmY~5nOq1muxRYyuMCcmDBm8Zj1PgXdkBwN5dRk~m-eDWKaF4SmBuivD89AvaLYPUU-bLR3pUMB8xxAd8pctO7dZnsYO4ivhLFg__",
+      "text": "Not afraid of new things and taking responsibility for his decisions, actively pumping self-propulsion",
+      "name": "Kostya",
+      "post": "Product manager"
+    },
+    {
+      "id": 3,
+      "img": "https://avatars.githubusercontent.com/u/109336972?v=4",
+      "text": "Caring colleague, developer, willing to support the team, share knowledge and solve challenges together",
+      "name": "Anton",
+      "post": "Front-end developer"
+    }
+  ]
+}
